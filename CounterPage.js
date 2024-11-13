@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 const CounterPage = () => {
-    const count = useSelector((state) => state); // Подключение состояния
+    const count = useSelector((state) => state); 
     const dispatch = useDispatch();
 
     const handleIncrement = (value) => {
