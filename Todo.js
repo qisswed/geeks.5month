@@ -16,24 +16,31 @@ const Todo = () => {
     return (
         <div>
             <h1>Todo List</h1>
-            {/* Фильтры */}
             <div>
                 <button
                     onClick={() => dispatch(setFilter('all'))}
                 >
-                    Все задания
+                    1.Все задания
                 </button>
+                <p>         </p>
                 <button
                     onClick={() => dispatch(setFilter('active'))}
                 >
-                    Активные задания
+                    2.Активные задания
                 </button>
+                <p>         </p>
+
                 <button
                     onClick={() => dispatch(setFilter('completed'))}
                 >
-                    Завершенные задания
+                    3.Завершенные задания
                 </button>
-                <button onClick={() => dispatch(resetFilter())}>Сбросить фильтр</button>
+                <p>          </p>
+
+                <button onClick={() => dispatch(resetFilter())}>
+                    4.Сбросить фильтр
+                </button>
+                <p>          </p>
             </div>
             <div>
                 <input
@@ -42,9 +49,12 @@ const Todo = () => {
                     onChange={(e) => setText(e.target.value)}
                     value={text}
                 />
+                <button onClick={() => handleAddTodo('all')}>    Добавить в 'Все задания'</button>
+                <button onClick={() => handleAddTodo('active')}>     Добавить в 'Активные задания'</button>
+                <button onClick={() => handleAddTodo('completed')}>     Добавить в 'Завершенные задания'</button>
                 <button onClick={handleAddTodo}>Add task</button>
             </div>
-            <TodoList />
+            <TodoList/>
         </div>
     );
 };

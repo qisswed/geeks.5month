@@ -1,8 +1,13 @@
 import {types} from "../types";
 
 const initialState = {
-    todos: [],
-    tasks: [],
+    todos: [
+        { id: 1, text: 'Task 1', completed: false, filter: 'all' },
+        { id: 2, text: 'Task 2', completed: true, filter: 'completed' },
+        { id: 3, text: 'Task 3', completed: false, filter: 'active' },
+        { id: 4, text: 'Task 4', completed: true, filter: 'completed' },
+        { id: 5, text: 'Task 5', completed: false, filter: 'active' },
+    ],
     filter: 'all'
 }
 
