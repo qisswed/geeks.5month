@@ -1,13 +1,12 @@
+import './App.css';
+import Todo from "./pages/todoPage/Todo";
 
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import CounterPage from './pages/CounterPage'
-
-const App = () => (
-    <Provider store={store}>
-        <CounterPage/>
-    </Provider>
-);
+function App() {
+    return (
+        <div className="App">
+            <Todo/>
+        </div>
+    );
+}
 
 export default App;
