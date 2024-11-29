@@ -1,16 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import { thunk } from "redux-thunk";import rootReducer from "./redux/reducers/rootReducer";
-import App from "./App";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import App from './App';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
     <Provider store={store}>
         <App />
-    </Provider>
+    </Provider>,
+    document.getElementById('root')
 );

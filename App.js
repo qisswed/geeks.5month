@@ -1,10 +1,15 @@
-import React from "react";
-import CharacterList from "./components/CharacterList";
+import React from 'react';
+import RegistrationForm from './components/RegistrationForm';
+import UserList from './components/UserList';
+import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
     return (
-        <div>
-            <CharacterList />
+        <div className="App">
+            <GlobalStyle />
+            <h1>Регистрация</h1>
+            <RegistrationForm />
+            <UserList />
         </div>
     );
 }

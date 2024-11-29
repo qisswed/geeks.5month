@@ -1,8 +1,8 @@
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from './features/userSlice';
 
-import { createStore } from 'redux';
-import CounterReducer from './reducer';
-import CounterPage from "../pages/CounterPage";
-
-const store = createStore(CounterReducer);
-
-export default store;
+export const store = configureStore({
+    reducer: {
+        users: userReducer,
+    },
+});
