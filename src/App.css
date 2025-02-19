@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
